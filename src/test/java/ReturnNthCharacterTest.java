@@ -16,20 +16,6 @@ public class ReturnNthCharacterTest {
         service = new ReturnNthCharacter();
     }
 
-    /*
-        Project instructions
-
-        Write a java service using a TDD approach that, given a text,
-        returns every Nth character from that text that is uppercase. N is a configurable parameter.
-
-        For example:
-        Given "ITCLiNicAl" and N = 1, the return value will be "ITCLNA";
-        Given "ITCLiNicAl" and N = 2, the return value will be "TLN";
-        Given "ITCLiNicAl" and N = 3, the return value will be "CNA";
-        Given "ITCLiNicAl" and N = 100, the return value will be "";
-        Given "ITCLiNicAl" and N = -1, the return value will be "";
-    */
-
     @Test
     public void testReturnNthCharacterNegative() {
         assertEquals(service.returnNthCharacterFrom(word, -1), "");

@@ -1,5 +1,4 @@
-import java.util.HashMap;
-import java.util.List;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class ReturnNthCharacter {
@@ -7,7 +6,7 @@ public class ReturnNthCharacter {
     public String returnNthCharacterFrom(String word, Integer nth) {
         if (nth < 1 || nth > word.length()) return "";
 
-        Map<Character, Integer> characterList = new HashMap<>();
+        Map<Character, Integer> characterList = new LinkedHashMap<>();
         StringBuilder newWord = new StringBuilder();
 
         // (nth - 1) because if nth = 1 it means the 1st character
