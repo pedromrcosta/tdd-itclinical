@@ -6,6 +6,7 @@ import static org.junit.Assert.assertEquals;
 public class ReturnNthCharacterTest {
 
     final String word = "ITCLiNicAl";
+    final String counterWord = "ItCLINiCAL";
     final String specialWord = "!tCL1Nical";
 
     ReturnNthCharacter service;
@@ -50,6 +51,11 @@ public class ReturnNthCharacterTest {
     @Test
     public void testSpecialReturnNthCharacter() {
         assertEquals(service.returnNthCharacterFrom(specialWord, 1), "!CL1N");
+    }
+
+    @Test
+    public void testCounter() {
+        assertEquals(service.returnNthCharacterFrom(counterWord, 1), "ICLINCAL");
     }
 
 }
