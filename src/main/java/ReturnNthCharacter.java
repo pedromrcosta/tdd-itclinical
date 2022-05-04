@@ -13,9 +13,9 @@ public class ReturnNthCharacter {
             char myCharacter = word.charAt(i);
 
             // tests if the myCharacter in the nth position is Uppercase
-            if (Character.isUpperCase(myCharacter) || // letter is Uppercase
-                    Character.isDigit(myCharacter) || // 
-                    Character.toString(myCharacter).matches("[^A-Za-z0-9]")) {
+            if (Character.isUpperCase(myCharacter) || // character is Uppercase
+                    Character.isDigit(myCharacter) || // character is a Number
+                    Character.toString(myCharacter).matches("[^A-Za-z0-9]")) { // character is not a Number or a Letter (regex pattern)
                 newWord.append(myCharacter);
             }
         }
