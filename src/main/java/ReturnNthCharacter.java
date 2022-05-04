@@ -1,3 +1,6 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class ReturnNthCharacter {
 
     public String returnNthCharacterFrom(String word, Integer nth) {
@@ -7,11 +10,13 @@ public class ReturnNthCharacter {
 
         // (nth - 1) because if nth = 1 it means the 1st character
         for (int i = nth-1; i < word.length(); i+=nth) {
-            char letter = word.charAt(i);
+            char myCharacter = word.charAt(i);
 
-            // tests if the character in the nth position is Uppercase
-            if (Character.isUpperCase(letter)) {
-                newWord.append(letter);
+            // tests if the myCharacter in the nth position is Uppercase
+            if (Character.isUpperCase(myCharacter) || // letter is Uppercase
+                    Character.isDigit(myCharacter) || // 
+                    Character.toString(myCharacter).matches("[^A-Za-z0-9]")) {
+                newWord.append(myCharacter);
             }
         }
 
